@@ -12,11 +12,12 @@ export class AppComponent {
   interpolation='interpolationN';
   person = ''
   nums = [];
+  nums2 = [];
 
   loadData() {
     this.nums = this.myservice.getUsers();
+    this.nums2 = this.myservice.getUsersSAME();
   }
-  
   
   constructor(
     private myservice: DataService
@@ -25,11 +26,16 @@ export class AppComponent {
   }
 
   addPerson(){
-  
-    
-
     this.myservice.AddUser(this.person);
+    this.loadData();
+    this.person = '';
+  }
+
+  removePerson(i){
+    this.myservice.removeUser(i);
+    this.loadData();
 
   }
+
 }
   

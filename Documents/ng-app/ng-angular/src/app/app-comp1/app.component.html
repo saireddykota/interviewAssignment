@@ -1,19 +1,21 @@
-<app-temp></app-temp>
-
-<br>
-<br>
-<br>
-<br>
-<hr>
-
-
 {{interpolation}}<br>
 
 <input [(ngModel)] ="person" style = "padding-left:10px;">
 <button (click)="addPerson()" [hidden]="person.length === 0">Add New Person</button>
 
+<h2>nums</h2>
 <ul>
-<tr *ngFor ="let num of nums;let i = index">
-  {{ num}}
+<tr *ngFor ="let instance_of_nums of nums;let i = index">
+  {{ instance_of_nums }}
+  <button (click)="removePerson(i)" >Delete Person</button>
 </tr></ul>
 
+
+
+
+
+<!-- <h2>nums2</h2>
+<ul>
+    <tr *ngFor ="let instance_of_nums2 of nums2;let i = index">
+      {{ instance_of_nums2 }}
+    </tr></ul> -->

@@ -8,11 +8,19 @@ export class DataService {
   constructor() {}
 
   getUsers() {
+    return [...this.users];
+  }
+
+  getUsersSAME() {
     return this.users;
   }
 
+
   AddUser(arg1) {
     this.users.push(arg1);
+  }
+  removeUser(i) {
+    this.users.splice(i,1);
   }
 
 }
