@@ -1,0 +1,19 @@
+<app-temp></app-temp>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+{{interpolation}}<br>
+
+<input [(ngModel)] ="person" style = "padding-left:10px;">
+<button (click)="addPerson()" [hidden]="person.length === 0">Add New Person</button>
+
+<ul>
+<tr *ngFor ="let num of nums;let i = index">
+  {{ num}}
+</tr></ul>
+
